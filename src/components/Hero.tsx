@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, MapPin, Briefcase, Heart } from 'lucide-react';
+import { ArrowDown, MapPin, Briefcase, GraduationCap } from 'lucide-react';
 
 const Hero = () => {
-  const nameLetters = "Alex Chen".split("");
-  const roleWords = ["Frontend Developer", "&", "UI Designer"];
+  const nameLetters = "Bitta Saiumesh".split("");
+  const roleWords = ["Full Stack Developer", "&", "AI Enthusiast"];
 
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
@@ -62,7 +62,7 @@ const Hero = () => {
               transition={{ duration: 0.5 }}
               className="text-coral font-medium mb-4 tracking-wide text-sm uppercase"
             >
-              Available for Freelance Work
+              Open to Internship Opportunities
             </motion.p>
 
             {/* Name with letter animation */}
@@ -108,9 +108,9 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.9 }}
               className="text-muted-foreground text-lg max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-              Crafting beautiful, intuitive digital experiences with clean code and 
-              pixel-perfect design. Passionate about animation, accessibility, and 
-              creating things that make people smile.
+              Aspiring Full Stack Developer with a strong foundation in Java, web development, 
+              and deep learning. Passionate about building efficient, scalable applications 
+              and continuously learning emerging technologies.
             </motion.p>
 
             {/* Quick Facts */}
@@ -120,9 +120,9 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 1.1 }}
               className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
             >
-              <QuickFact icon={<MapPin size={16} />} text="San Francisco, CA" />
-              <QuickFact icon={<Briefcase size={16} />} text="5+ Years Exp" />
-              <QuickFact icon={<Heart size={16} />} text="Open Source" />
+              <QuickFact icon={<MapPin size={16} />} text="Andhra Pradesh, India" />
+              <QuickFact icon={<GraduationCap size={16} />} text="B.Tech in CAI" />
+              <QuickFact icon={<Briefcase size={16} />} text="AI Intern" />
             </motion.div>
 
             {/* CTA Button */}
@@ -177,7 +177,7 @@ const Hero = () => {
                 transition={{ delay: 1.5 }}
                 className="absolute -left-4 top-1/4 glass px-4 py-2 rounded-full shadow-md"
               >
-                <span className="text-sm font-medium">React Expert</span>
+                <span className="text-sm font-medium">Java Developer</span>
               </motion.div>
               
               <motion.div
@@ -186,7 +186,7 @@ const Hero = () => {
                 transition={{ delay: 1.7 }}
                 className="absolute -right-4 bottom-1/4 glass px-4 py-2 rounded-full shadow-md"
               >
-                <span className="text-sm font-medium">✨ UI Lover</span>
+                <span className="text-sm font-medium">🤖 AI/ML Explorer</span>
               </motion.div>
             </div>
           </motion.div>

@@ -8,21 +8,21 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: 'React / Next.js', level: 95, color: 'from-coral to-coral-light' },
-  { name: 'TypeScript', level: 90, color: 'from-navy to-navy-light' },
-  { name: 'CSS / Tailwind', level: 92, color: 'from-coral to-coral-light' },
-  { name: 'Framer Motion', level: 85, color: 'from-navy to-navy-light' },
-  { name: 'Figma / Design', level: 88, color: 'from-coral to-coral-light' },
-  { name: 'Node.js', level: 75, color: 'from-navy to-navy-light' },
+  { name: 'Java', level: 90, color: 'from-coral to-coral-light' },
+  { name: 'Python', level: 85, color: 'from-navy to-navy-light' },
+  { name: 'HTML / CSS', level: 80, color: 'from-coral to-coral-light' },
+  { name: 'TensorFlow / Keras', level: 75, color: 'from-navy to-navy-light' },
+  { name: 'MySQL', level: 78, color: 'from-coral to-coral-light' },
+  { name: 'C Programming', level: 70, color: 'from-navy to-navy-light' },
 ];
 
 const tools = [
   { name: 'VS Code', icon: '💻' },
-  { name: 'Figma', icon: '🎨' },
+  { name: 'Jupyter Notebook', icon: '📓' },
+  { name: 'Streamlit', icon: '🌊' },
   { name: 'Git', icon: '📦' },
-  { name: 'Notion', icon: '📝' },
-  { name: 'Slack', icon: '💬' },
-  { name: 'Chrome DevTools', icon: '🔧' },
+  { name: 'OpenCV', icon: '👁️' },
+  { name: 'scikit-learn', icon: '🔬' },
 ];
 
 const Skills = () => {
@@ -78,7 +78,7 @@ const Skills = () => {
               transition={{ delay: 0.2 }}
               className="font-display text-2xl font-bold mb-8"
             >
-              Tools I Love
+              Tools I Use
             </motion.h3>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -97,7 +97,7 @@ const Skills = () => {
               ))}
             </div>
 
-            {/* Additional Info */}
+            {/* Certifications Highlight */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -105,12 +105,13 @@ const Skills = () => {
               className="mt-8 p-6 bg-secondary/50 rounded-2xl"
             >
               <h4 className="font-display font-bold text-lg mb-3 text-foreground">
-                Always Learning 📚
+                Certifications 🏆
               </h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Currently exploring Three.js for 3D web experiences, and diving deeper 
-                into accessibility patterns. I believe the best developers never stop learning!
-              </p>
+              <ul className="text-muted-foreground text-sm leading-relaxed space-y-2">
+                <li>• Java Programming – CodeTantra (Mar 2025)</li>
+                <li>• Full Stack Development Bootcamp – Make Skilled (Score: 91)</li>
+                <li>• Java Full Stack – Eduskills Academy (Nov 2024)</li>
+              </ul>
             </motion.div>
           </div>
         </div>

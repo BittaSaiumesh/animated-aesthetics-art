@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code2, Palette, Rocket, Coffee } from 'lucide-react';
+import { Code2, Brain, Rocket, GraduationCap } from 'lucide-react';
 
 const About = () => {
   const ref = useRef(null);
@@ -51,19 +51,19 @@ const About = () => {
             {/* Text Content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
-                Hi there! I'm a passionate <span className="text-coral font-medium">Frontend Developer</span> and 
-                <span className="text-coral font-medium"> UI Designer</span> with over 5 years of experience 
-                building digital products that users love.
+                Hi! I'm <span className="text-coral font-medium">Bitta Saiumesh</span>, an 
+                aspiring <span className="text-coral font-medium">Full Stack Developer</span> currently 
+                pursuing B.Tech in Computer Science & AI at G. Pullaiah College of Engineering.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I believe great design is invisible – it simply works. My approach combines clean, 
-                maintainable code with thoughtful user experiences. When I'm not coding, you'll 
-                find me exploring new design trends, contributing to open source, or perfecting 
-                my pour-over coffee technique.
+                I have a strong foundation in Java, Python, and web technologies, with hands-on 
+                experience in machine learning and deep learning frameworks like TensorFlow and Keras. 
+                My recent project, GrainPalette, demonstrates my ability to apply transfer learning 
+                for real-world image classification problems.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Currently working with startups and agencies to bring ideas to life through 
-                intuitive interfaces and smooth interactions.
+                I'm passionate about building efficient, scalable applications and continuously 
+                expanding my technical and problem-solving skills through internships and bootcamps.
               </p>
             </motion.div>
 
@@ -71,42 +71,63 @@ const About = () => {
             <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4">
               <HighlightCard
                 icon={<Code2 className="text-coral" />}
-                number="50+"
-                label="Projects Completed"
+                number="1"
+                label="Project Completed"
               />
               <HighlightCard
-                icon={<Palette className="text-coral" />}
-                number="30+"
-                label="Happy Clients"
+                icon={<Brain className="text-coral" />}
+                number="2"
+                label="AI Internships"
+              />
+              <HighlightCard
+                icon={<GraduationCap className="text-coral" />}
+                number="8.16"
+                label="Current CGPA"
               />
               <HighlightCard
                 icon={<Rocket className="text-coral" />}
-                number="5+"
-                label="Years Experience"
-              />
-              <HighlightCard
-                icon={<Coffee className="text-coral" />}
-                number="∞"
-                label="Cups of Coffee"
+                number="3"
+                label="Certifications"
               />
             </motion.div>
           </div>
 
-          {/* Personal Interests */}
+          {/* Education Timeline */}
           <motion.div variants={itemVariants} className="mt-16">
             <h3 className="font-display text-2xl font-bold text-center mb-8">
-              When I'm Not Coding
+              Education Journey
+            </h3>
+            <div className="space-y-4 max-w-2xl mx-auto">
+              <EducationCard 
+                degree="B.Tech in Computer Science & AI"
+                institution="G. Pullaiah College of Engineering And Technology"
+                period="Sep 2023 – May 2026"
+                cgpa="8.16"
+              />
+              <EducationCard 
+                degree="Diploma in Electrical & Electronics Engineering"
+                institution="Brindavan Institute of Technology and Science"
+                period="2020 – 2023"
+                cgpa="8.3"
+              />
+            </div>
+          </motion.div>
+
+          {/* Interests */}
+          <motion.div variants={itemVariants} className="mt-16">
+            <h3 className="font-display text-2xl font-bold text-center mb-8">
+              My Interests
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                '📸 Photography',
-                '🎮 Gaming',
-                '🎵 Music',
-                '✈️ Travel',
-                '📚 Reading',
-                '🏃 Running',
-                '🎨 Digital Art',
-                '☕ Coffee Brewing'
+                '🤖 Machine Learning',
+                '💻 Web Development',
+                '🧠 Deep Learning',
+                '☕ Java Programming',
+                '🐍 Python',
+                '📊 Data Science',
+                '🔧 Problem Solving',
+                '📚 Continuous Learning'
               ].map((interest, index) => (
                 <motion.span
                   key={interest}
@@ -147,6 +168,33 @@ const HighlightCard = ({
       {number}
     </div>
     <div className="text-sm text-muted-foreground">{label}</div>
+  </motion.div>
+);
+
+const EducationCard = ({
+  degree,
+  institution,
+  period,
+  cgpa
+}: {
+  degree: string;
+  institution: string;
+  period: string;
+  cgpa: string;
+}) => (
+  <motion.div
+    whileHover={{ x: 5 }}
+    className="bg-card p-5 rounded-xl border border-border/50 flex items-start gap-4"
+  >
+    <div className="w-3 h-3 mt-2 bg-coral rounded-full shrink-0" />
+    <div className="flex-1">
+      <h4 className="font-display font-bold text-foreground">{degree}</h4>
+      <p className="text-sm text-muted-foreground">{institution}</p>
+      <div className="flex justify-between mt-2 text-xs">
+        <span className="text-coral">{period}</span>
+        <span className="text-muted-foreground">CGPA: {cgpa}</span>
+      </div>
+    </div>
   </motion.div>
 );
 

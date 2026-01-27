@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Mail, MapPin, Send, Github, Linkedin, Twitter, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -31,9 +31,8 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: <Github size={20} />, href: '#', label: 'GitHub' },
-    { icon: <Linkedin size={20} />, href: '#', label: 'LinkedIn' },
-    { icon: <Twitter size={20} />, href: '#', label: 'Twitter' },
+    { icon: <Github size={20} />, href: 'https://github.com/bittasaiumesh', label: 'GitHub' },
+    { icon: <Linkedin size={20} />, href: 'https://linkedin.com/in/bittasaiumesh', label: 'LinkedIn' },
   ];
 
   return (
@@ -50,12 +49,12 @@ const Contact = () => {
             Get In Touch
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2 mb-4">
-            Let's Work Together
+            Let's Connect
           </h2>
           <div className="w-20 h-1 bg-gradient-accent mx-auto rounded-full mb-6" />
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Have a project in mind or just want to chat? I'd love to hear from you. 
-            Drop me a message and let's create something amazing!
+            Looking for internship opportunities or want to discuss a project? 
+            I'd love to hear from you!
           </p>
         </motion.div>
 
@@ -69,19 +68,19 @@ const Contact = () => {
           >
             <div>
               <h3 className="font-display text-2xl font-bold mb-6">
-                Let's Connect
+                Reach Out
               </h3>
               <div className="space-y-4">
                 <ContactInfo
                   icon={<Mail className="text-coral" />}
                   label="Email"
-                  value="hello@alexchen.dev"
-                  href="mailto:hello@alexchen.dev"
+                  value="bittasaiumesh@gmail.com"
+                  href="mailto:bittasaiumesh@gmail.com"
                 />
                 <ContactInfo
                   icon={<MapPin className="text-coral" />}
                   label="Location"
-                  value="San Francisco, CA"
+                  value="Andhra Pradesh, India"
                 />
               </div>
             </div>
@@ -94,6 +93,8 @@ const Contact = () => {
                   <motion.a
                     key={link.label}
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.4 + index * 0.1 }}
@@ -108,7 +109,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Fun CTA */}
+            {/* Open to Opportunities */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -116,10 +117,11 @@ const Contact = () => {
               className="p-6 bg-gradient-accent rounded-2xl text-accent-foreground"
             >
               <h4 className="font-display font-bold text-lg mb-2">
-                Available for Freelance 🚀
+                Open for Internships 🚀
               </h4>
               <p className="text-sm opacity-90 mb-4">
-                I'm currently taking on new projects. Let's build something great together!
+                I'm actively seeking internship opportunities to contribute to impactful projects 
+                while expanding my skills in Full Stack Development and AI.
               </p>
               <a 
                 href="#" 
@@ -178,7 +180,7 @@ const Contact = () => {
                   onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                   required
                   className="w-full px-4 py-3 bg-secondary border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-coral/50 transition-all resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me about the opportunity..."
                 />
               </div>
 

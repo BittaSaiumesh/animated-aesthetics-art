@@ -21,7 +21,7 @@ const Footer = () => {
             >
               <Heart className="w-4 h-4 text-coral fill-coral" />
             </motion.span>
-            {' '}by Alex Chen
+            {' '}by Bitta Saiumesh
           </motion.div>
 
           <motion.p

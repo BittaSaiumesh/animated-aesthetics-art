@@ -14,51 +14,51 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    title: 'Sunset Photography',
-    category: 'Photography',
-    description: 'Capturing golden hour moments during my travels. Nature always inspires my design work.',
-    image: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=600&h=400&fit=crop',
-    color: 'from-orange-400/20 to-pink-500/20',
+    title: 'GrainPalette – Rice Classification',
+    category: 'Project',
+    description: 'Built a rice grain classifier using transfer learning (MobileNetV2) to classify 5 types of rice grains with a real-time Streamlit web interface.',
+    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&h=400&fit=crop',
+    color: 'from-orange-400/20 to-amber-500/20',
   },
   {
     id: 2,
-    title: 'Urban Exploration',
-    category: 'Travel',
-    description: 'Finding inspiration in architecture and city landscapes around the world.',
-    image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&h=400&fit=crop',
+    title: 'AI Internship – SmartInternz',
+    category: 'Achievement',
+    description: 'Completed AI Internship Program at SmartInternz (SmartBridge) gaining hands-on experience with machine learning and AI technologies.',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
     color: 'from-blue-400/20 to-purple-500/20',
   },
   {
     id: 3,
-    title: 'Creative Workspace',
-    category: 'Lifestyle',
-    description: 'My setup where the magic happens. A clean space for clean code.',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+    title: 'Deep Learning with TensorFlow',
+    category: 'Learning',
+    description: 'Exploring neural networks, transfer learning, and computer vision using TensorFlow and Keras frameworks.',
+    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop',
     color: 'from-green-400/20 to-teal-500/20',
   },
   {
     id: 4,
-    title: 'Coffee Culture',
-    category: 'Hobby',
-    description: 'Perfecting the art of pour-over. Coffee is fuel for creativity.',
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop',
-    color: 'from-amber-400/20 to-orange-500/20',
+    title: 'Full Stack Development Bootcamp',
+    category: 'Achievement',
+    description: 'Participated in a 6-day intensive Full Stack Development bootcamp at Make Skilled, Hyderabad with a score of 91.',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+    color: 'from-violet-400/20 to-indigo-500/20',
   },
   {
     id: 5,
-    title: 'Mountain Adventures',
-    category: 'Travel',
-    description: 'Hiking and exploring nature. Best ideas come when disconnected.',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop',
-    color: 'from-emerald-400/20 to-cyan-500/20',
+    title: 'Java Programming Journey',
+    category: 'Learning',
+    description: 'Strong foundation in Java programming with certifications from CodeTantra and Eduskills Academy for Full Stack development.',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop',
+    color: 'from-amber-400/20 to-orange-500/20',
   },
   {
     id: 6,
-    title: 'Design Sketches',
-    category: 'Creative',
-    description: 'Quick ideas and wireframes. Sometimes pen and paper beat pixels.',
-    image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&h=400&fit=crop',
-    color: 'from-violet-400/20 to-indigo-500/20',
+    title: 'Data Quality Analyst – Rooman Tech',
+    category: 'Achievement',
+    description: 'AI – Data Quality Analyst Intern at Rooman Technologies, working on data validation and AI quality assurance.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+    color: 'from-emerald-400/20 to-cyan-500/20',
   },
 ];
 
@@ -85,16 +85,16 @@ const Gallery = () => {
           className="text-center mb-12"
         >
           <span className="text-coral font-medium text-sm uppercase tracking-wider">
-            Beyond the Code
+            Projects & Achievements
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2 mb-4">
-            Life & Inspirations
+            My Journey
           </h2>
           <div className="w-20 h-1 bg-gradient-accent mx-auto rounded-full mb-8" />
           
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A glimpse into the things that inspire me, fuel my creativity, and keep me balanced. 
-            Great work comes from a great life!
+            A glimpse into my projects, internships, and continuous learning journey. 
+            Building skills one step at a time!
           </p>
         </motion.div>
 
@@ -261,7 +261,7 @@ const Lightbox = ({
             whileTap={{ scale: 0.98 }}
             className="mt-6 inline-flex items-center gap-2 text-coral font-medium hover:underline"
           >
-            View Full Size <ExternalLink size={16} />
+            View Details <ExternalLink size={16} />
           </motion.button>
         </div>
       </div>

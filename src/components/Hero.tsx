@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, MapPin, Briefcase, GraduationCap } from 'lucide-react';
+import profilePhoto from '@/assets/profile-photo.jpeg';
 
 const Hero = () => {
   const nameLetters = "Bitta Saiumesh".split("");
@@ -165,9 +166,11 @@ const Hero = () => {
               
               {/* Avatar container */}
               <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden bg-gradient-accent p-1 shadow-glow">
-                <div className="w-full h-full rounded-full bg-secondary flex items-center justify-center overflow-hidden">
-                  <div className="text-8xl">👨‍💻</div>
-                </div>
+                <img 
+                  src={profilePhoto} 
+                  alt="Bitta Saiumesh" 
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
 
               {/* Floating badges */}
